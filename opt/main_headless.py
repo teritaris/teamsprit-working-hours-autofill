@@ -44,7 +44,7 @@ for day_count in range(1,32):
     sleep(1)
     try:
         # 項目が1つのみ場合の記述。項目が複数ある場合は変更する必要がある。
-        driver.find_element(By.ID, "dailyWorkCell" + str(dt.year) + "-" + str(dt.month) + "-" + str(day_count).zfill(2)).click()
+        driver.find_element(By.ID, "dailyWorkCell" + str(dt.year) + "-" + str(dt.month).zfill(2) + "-" + str(day_count).zfill(2)).click()
         sleep(1)
         driver.find_element(By.CSS_SELECTOR, "#empWorkSlider0 > tbody > tr:nth-child(2) > td:nth-child(4) > div").click()
         driver.find_element(By.CSS_SELECTOR, "#empWorkLock0").click()
